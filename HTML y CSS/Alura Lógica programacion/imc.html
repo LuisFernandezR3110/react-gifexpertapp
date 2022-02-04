@@ -1,0 +1,56 @@
+<meta charse = "UFT-8">
+
+<h1>PROGRAMA IMC</h1>
+
+<script>
+
+    function saltarLinea(){
+
+        document.write("<br> <br> <br>");
+
+    }
+
+    function imprimir(frase){
+
+        document.write(frase);
+        saltarLinea();
+
+    }
+
+    function calcularImc(peso, altura, nombre){
+    
+        return(imc = peso / (altura * altura));
+
+    }
+
+    nombre = prompt("Informe su nombre");
+    pesoInformado = prompt(nombre + ", Informe su peso: ");
+    alturaInformado = prompt(nombre + ", Informe su altura: ");
+
+    imcCalculado = calcularImc(pesoInformado, alturaInformado)
+
+    imprimir(nombre + ", su IMC calculado es: " + imcCalculado);
+
+    if(imcCalculado <= 18.5){
+        imprimir(nombre + ", tu peso es bajo");
+    }
+
+    if(imcCalculado >= 18.5){
+        if(imcCalculado < 25){
+            imprimir(nombre + ", tienes un peso normal");
+        }       
+    }
+
+    if(imcCalculado >= 25){
+        if(imcCalculado < 30){
+            imprimir(nombre + ", tienes sobrepeso");
+        }    
+    }
+
+
+    if(imcCalculado >= 30){
+        imprimir(nombre + ", eres obeso");
+    }
+
+
+</script>

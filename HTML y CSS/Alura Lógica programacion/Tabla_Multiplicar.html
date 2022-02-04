@@ -1,0 +1,38 @@
+<meta Charset = "UFT-8">
+
+<h1>PROGRAMA ATABLA DE MULTIPLICAR</h1>
+
+<script>
+
+    function saltarLinea(){
+
+        document.write("<br> <br> <br>");
+
+    }
+
+    function imprimir(frase){
+
+        document.write(frase);
+        saltarLinea();
+
+    }
+
+    var cantidad = parseInt(prompt("Intruduce un número hsta donde multiplicar"));
+
+    var multiplicador = 1; 
+
+    imprimir("While:")
+    while(multiplicador <= 10){
+
+        imprimir(cantidad + " * " + multiplicador + " = " + cantidad * multiplicador);
+        multiplicador++;
+
+    }
+
+    for(var multiplicador = 1; multiplicador <= 10; multiplicador++){
+
+        imprimir(cantidad * multiplicador);
+
+    }
+
+</script>
